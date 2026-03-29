@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "serverless-shared-constructs"
+version = "0.1.0"
+description = "Shared CDK constructs for the serverless mono-repo"
+requires-python = ">=3.12"
+dependencies = [
+    "aws-cdk-lib==2.211.0",
+    "constructs>=10.0.0,<11.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["constructs_lib*"]
