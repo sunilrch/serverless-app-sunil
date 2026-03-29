@@ -1,8 +1,10 @@
 name: Mono-Repo DevSecOps Pipeline
 
 on:
-on:
-  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'serverless-labs/**'
   pull_request:
     branches: [ main ]
     paths-ignore:
